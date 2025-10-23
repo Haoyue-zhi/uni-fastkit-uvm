@@ -1,0 +1,29 @@
+{
+  "name": "uni-fastkit-uvm",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/uni-fastkit-uvm.js",
+  "module": ".dist/uni-fastkit-uvm.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./dist/uni-fastkit-uvm.js"
+    }
+  },
+  "scripts": {
+    "test": "pnpm build && node dist/uni-fastkit-uvm.js",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  },
+  "dependencies": {}
+}
