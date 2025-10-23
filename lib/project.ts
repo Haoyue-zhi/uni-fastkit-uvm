@@ -9,7 +9,8 @@ export async function merge(
         dependencies: Record<string, any>
         devDependencies: Record<string, any>
     },
-    manager: 'pnpm') {
+    manager: 'pnpm'
+) {
     const args = ['add']
     async function spawnAsync(manager: any, args: any) {
         const child = spawn(manager, args, { stdio: 'inherit', cwd: projectPath })

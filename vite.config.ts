@@ -4,10 +4,9 @@ export default defineConfig({
   build: {
     // 声明为库模式打包
     lib: {
-      entry: './lib/main.ts', // 入口文件
-      name: 'uvm', // 库的全局变量名（仅在UMD格式时需要）
+      entry: './bin/index.ts', // 入口文件
       formats: ['es'], // 输出格式：Node库优先用ESM（mjs）
-      fileName: 'uni-fastkit-uvm' // 输出文件名
+      fileName: 'index' // 输出文件名
     },
     // 传递给Rollup的配置（Vite基于Rollup打包）
     rollupOptions: {

@@ -1,28 +1,38 @@
 {
-  "name": "uni-fastkit-uvm",
-  "version": "0.0.1",
+  "name": "@uni-fastkit/uvm",
   "type": "module",
-  "files": [
-    "dist",
-    "index.d.ts"
+  "version": "0.0.1",
+  "description": "uni-fastkit version manager",
+  "author": {
+    "name": "Haoyue-zhi",
+    "email": "zhangwenhaoyue@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haoyue-zhi/uni-fastkit-uvm.git"
+  },
+  "keywords": [
+    "uni-fastkit",
+    "uni-app",
+    "version",
+    "manager"
   ],
   "main": "./dist/uni-fastkit-uvm.js",
   "module": ".dist/uni-fastkit-uvm.js",
   "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./dist/uni-fastkit-uvm.js"
-    }
-  },
+  "bin": "bin/index.js",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
   "scripts": {
-    "test": "pnpm build && node dist/uni-fastkit-uvm.js",
+    "test": "pnpm build && node dist/index.js",
     "build": "tsc && vite build"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^24.9.1",
     "typescript": "~5.9.2",
     "vite": "^7.1.5"
-  },
-  "dependencies": {}
+  }
 }

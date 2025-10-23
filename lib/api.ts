@@ -36,7 +36,7 @@ async function fetchWithRetry(
 
             // 检查HTTP响应状态是否成功（200-299）
             if (response.ok) {
-                console.log(`请求成功: ${currentUrl}`);
+                // console.log(`请求成功: ${currentUrl}`);
                 return response;
             }
 
