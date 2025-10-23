@@ -17,10 +17,10 @@
     "version",
     "manager"
   ],
-  "main": "./dist/uni-fastkit-uvm.js",
-  "module": ".dist/uni-fastkit-uvm.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./index.d.ts",
-  "bin": "bin/index.js",
+  "bin": "./dist/index.js",
   "files": [
     "dist",
     "index.d.ts"
