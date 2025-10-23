@@ -1,5 +1,5 @@
 {
-  "name": "@uni-fastkit/uvm",
+  "name": "uni-fastkit-uvm",
   "type": "module",
   "version": "0.0.1",
   "description": "uni-fastkit version manager",
