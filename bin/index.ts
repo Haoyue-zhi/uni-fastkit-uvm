@@ -9,7 +9,7 @@ async function start(filtList: string[] = []) {
      filtList = ['vue', 'vue-i18n', '@vue/runtime-core', 'vite', ...filtList]
      const version = await find('@dcloudio/vite-plugin-uni')
      const deps = await get(filtList, version)
-     await merge(project, deps, 'pnpm')
+     await merge(project, deps)
 }
 
 start()

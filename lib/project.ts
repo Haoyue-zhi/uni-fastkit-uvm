@@ -9,16 +9,15 @@ export async function merge(
         dependencies: Record<string, any>
         devDependencies: Record<string, any>
     },
-    manager: 'pnpm'
 ) {
     const args = ['add']
-    async function spawnAsync(manager: any, args: any) {
-        const child = spawn(manager, args, { stdio: 'inherit', cwd: projectPath })
+    async function spawnAsync(args: any) {
+        const child = spawn('pnpm', args, { stdio: 'inherit', cwd: projectPath })
         return new Promise((resolve, reject) => {
             child.on('error', reject)
-            child.on('exit', resolve)
+            child.on('close', resolve)
         })
     }
-    await spawnAsync(manager, [...args, ...parseDeps(packageInfo.dependencies)])
-    await spawnAsync(manager, [...args, ...parseDeps(packageInfo.devDependencies), '-D'])
+    await spawnAsync([...args, ...parseDeps(packageInfo.dependencies)])
+    await spawnAsync([...args, ...parseDeps(packageInfo.devDependencies), '-D'])
 }
